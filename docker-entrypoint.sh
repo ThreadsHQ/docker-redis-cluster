@@ -1,5 +1,9 @@
 #!/bin/sh
 
+export APPENDONLY=${APPENDONLY:"yes"}
+export MAXMEMORY=${MAXMEMORY:"100mb"}
+export MAXMEMORY_POLICY=${MAXMEMORY_POLICY:"volatile-lru"}
+
 if [ "$1" = 'redis-cluster' ]; then
     # Allow passing in cluster IP by argument or environmental variable
     IP="${2:-$IP}"

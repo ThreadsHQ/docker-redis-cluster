@@ -3,4 +3,4 @@ port ${PORT}
 appendonly ${APPENDONLY}
 dir /redis-data/${PORT}
 maxmemory ${MAXMEMORY}
-maxmemory-policy volatile-lru
+maxmemory-policy ${MAXMEMORY_POLICY}
